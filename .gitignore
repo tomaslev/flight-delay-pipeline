@@ -1,0 +1,4 @@
+*.csv
+.DS_Store 
+fit_to_db.ipynb
+__pycache__

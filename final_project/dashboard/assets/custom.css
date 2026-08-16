@@ -1,0 +1,106 @@
+/* DST Airlines Dashboard v3 — Professional Aviation Theme */
+
+body { margin: 0; padding: 0; background: #0a0e1a; }
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #0a0e1a; }
+::-webkit-scrollbar-thumb { background: #1e2a3a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2a3a4a; }
+
+/* ── Nav items hover ────────────────────────────────────────── */
+.nav-item:hover {
+    background-color: #161d2e !important;
+    color: #f1f5f9 !important;
+}
+
+/* ── Dropdown — force dark on ALL elements ──────────────────── */
+.dst-dropdown .Select-control,
+.dst-dropdown .Select-input,
+.dst-dropdown .Select-input input {
+    background-color: #161d2e !important;
+    border-color: #1e2a3a !important;
+    border-radius: 8px !important;
+    color: #f1f5f9 !important;
+    min-height: 34px !important;
+}
+.dst-dropdown .Select-control:hover {
+    border-color: #00d4ff !important;
+}
+.dst-dropdown .Select-value-label,
+.dst-dropdown .Select-value,
+.dst-dropdown .Select-single-value {
+    color: #f1f5f9 !important;
+    background-color: #161d2e !important;
+}
+.dst-dropdown .Select-placeholder {
+    color: #64748b !important;
+    background-color: #161d2e !important;
+}
+.dst-dropdown .Select-arrow-zone,
+.dst-dropdown .Select-arrow {
+    border-top-color: #64748b !important;
+    color: #64748b !important;
+}
+/* THE KEY FIX — dropdown menu background */
+.dst-dropdown .Select-menu-outer,
+.dst-dropdown .Select-menu {
+    background-color: #161d2e !important;
+    border: 1px solid #1e2a3a !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6) !important;
+    z-index: 9999 !important;
+}
+.dst-dropdown .Select-option {
+    background-color: #161d2e !important;
+    color: #94a3b8 !important;
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+}
+.dst-dropdown .Select-option:hover,
+.dst-dropdown .Select-option.is-focused {
+    background-color: #1e2a3a !important;
+    color: #f1f5f9 !important;
+}
+.dst-dropdown .Select-option.is-selected {
+    background-color: rgba(0,212,255,0.12) !important;
+    color: #00d4ff !important;
+}
+.dst-dropdown .VirtualizedSelectOption {
+    background-color: #161d2e !important;
+    color: #94a3b8 !important;
+}
+.dst-dropdown .VirtualizedSelectFocusedOption {
+    background-color: #1e2a3a !important;
+    color: #f1f5f9 !important;
+}
+
+/* ── Range slider ───────────────────────────────────────────── */
+.rc-slider-track { background-color: #00d4ff !important; }
+.rc-slider-handle {
+    border-color: #00d4ff !important;
+    background-color: #00d4ff !important;
+    box-shadow: 0 0 0 3px rgba(0,212,255,0.2) !important;
+    opacity: 1 !important;
+}
+.rc-slider-rail { background-color: #1e2a3a !important; }
+.rc-slider-mark-text { color: #64748b !important; font-size: 10px !important; }
+.rc-slider-dot { border-color: #1e2a3a !important; background: #1e2a3a !important; }
+.rc-slider-dot-active { border-color: #00d4ff !important; }
+
+/* ── Radio items ────────────────────────────────────────────── */
+input[type="radio"] { accent-color: #00d4ff; }
+
+/* ── Button ─────────────────────────────────────────────────── */
+#btn-predict:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    transition: all 0.15s;
+}
+
+/* ── Input fields ───────────────────────────────────────────── */
+input:focus {
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 0 3px rgba(0,212,255,0.15) !important;
+    outline: none !important;
+}

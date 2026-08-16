@@ -1,0 +1,35 @@
+services:
+  db:
+    container_name: pg_airlines_container
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: airlines
+      POSTGRES_PASSWORD: liora
+      POSTGRES_DB: airlines_db
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    container_name: pgadmin4_airlines_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: daniel@datascientest.com
+      PGADMIN_DEFAULT_PASSWORD: data_engineer
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+  api:
+    container_name: flight_prediction_api
+    build:
+      context: ./api
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql+psycopg2://airlines:liora@db:5432/airlines_db
